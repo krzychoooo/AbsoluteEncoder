@@ -1,0 +1,29 @@
+{
+  "name": "AbsoluteEncoder",
+  "version": "1.0.0",
+  "description": "This library read rotations and step from absolute encoders by SSI",
+  "keywords": "Absolute encoder, SSI",
+  "authors":
+  {
+    "name":  "Krzychoooo",
+    "url":   "https://github.com/krzychoooo",
+    "maintainer": true
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/krzychoooo/AbsoluteEncoder"
+  },
+   "frameworks": "arduino",
+  "homepage": "https://github.com/krzychoooo/AbsoluteEncoder",
+  "export": {
+    "exclude": [
+      "linux",
+      "extras",
+      "tests"
+    ]
+  },
+  "license": "MIT",
+  "examples": "examples/*/*/*.ino",
+  "headers": ["AbsoluteEncoder.h"]
+}
