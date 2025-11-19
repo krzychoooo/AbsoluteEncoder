@@ -11,8 +11,6 @@ uint16_t rotation;
 uint16_t step;
 uint8_t  errorBit;
 
-void printBinary(uint16_t, uint16_t) ;
-
 
 void setup() {
   myEncoder.begin();
@@ -24,16 +22,8 @@ void setup() {
 void loop() {
   myEncoder.read(rotation, step, errorBit, 1);
   Serial2.print(" Rotation -> "); Serial2.print(rotation, 10);
-  Serial2.print(" Step -> "); printBinary(step, 0b0000001000000000);
-  Serial2.print(" Error bit -> "); printBinary((uint16_t)errorBit, 0b0000000000000100);
-  Serial2.print(" step ->"); printBinary(step, 0b0000001000000000);
+  Serial2.print(" Error bit -> "); Serial2.print(errorBit, 10);
   Serial2.print(" step ->"); Serial2.println(step, 10);
   delay(500);
 }
 
-
-void printBinary(uint16_t var, uint16_t position) {
-  for (uint16_t test = position; test; test >>= 1) {
-    Serial2.write(var  & test ? '1' : '0');
-  }
-}
