@@ -4,7 +4,8 @@ AbsoluteEncoder::AbsoluteEncoder(int pinClock, int pinData, uint8_t rotaryRes, u
     _pinClock = pinClock;
     _pinData = pinData;
     _pinSet = pinSet;
-
+	_rotaryRes = rotaryRes;
+    _stepRes = stepRes;
 }
 
 AbsoluteEncoder::~AbsoluteEncoder()
