@@ -4,6 +4,7 @@ AbsoluteEncoder::AbsoluteEncoder(int pinClock, int pinData, uint8_t rotaryRes, u
     _pinClock = pinClock;
     _pinData = pinData;
     _pinSet = pinSet;
+
 }
 
 AbsoluteEncoder::~AbsoluteEncoder()
@@ -14,7 +15,7 @@ void AbsoluteEncoder::read(uint16_t &rotations, uint16_t &step, uint8_t &error, 
     rotations = 0;
     step = 0;
     error = 0;
-    digitalWrite(this->_pinClock,LOW);  //(1) technical_information_ssi_interface_description_en_im0100079.pdf page 5
+  digitalWrite(this->_pinClock,LOW);  //(1) technical_information_ssi_interface_description_en_im0100079.pdf page 5
   delayMicroseconds(5);
   digitalWrite(this->_pinClock,HIGH); //(2)
   delayMicroseconds(5);
