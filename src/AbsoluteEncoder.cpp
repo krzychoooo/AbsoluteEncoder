@@ -53,7 +53,8 @@ void AbsoluteEncoder::read(uint16_t &rotations, uint16_t &step, uint8_t &error, 
     step = gray2bin(step);
     rotations = gray2bin(rotations);
   }
-  
+
+  delay(25);  
 
 }
 
